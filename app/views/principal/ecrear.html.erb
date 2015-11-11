@@ -1,0 +1,26 @@
+<h1><%= @saludo %></h1>
+<h1>Principal#ecrear</h1>
+
+<h1>Crea una nueva empresa!</h1>
+
+
+<%= form_tag({:controller => "principal", :action => "eperfil"}, :method => "post") do %>
+   <%= label_tag "name", "Nombre del proyecto" %>
+   <br />
+   <%= text_field_tag "name", "", :required => "required" %>
+   <br />
+    <%= label_tag "descripcion", "Descripcion" %>
+   <br />
+   <%= text_area_tag "descripcion", "", :cols => 50, :rows => 10, :required => "required" %>
+   <br />
+	
+	<%= label_tag "dateborn", "Fecha de Creacion " %>
+   <br />
+   <%= text_field_tag "dateborn", "dd/mm/yyyy",  :required => "required" %>
+   <br />
+   <%= submit_tag "Crear ahora!" %>
+<% end %>
+
+
+
+<p>Find me in app/views/principal/ecrear.html.erb</p>

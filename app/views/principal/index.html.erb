@@ -1,0 +1,90 @@
+<!-- Plantilla para la página principal -->
+
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="media/estilo01.css">
+		<title>Bienvenido a Unilink</title>
+	</head>
+	<body>
+		<div class="base">
+			<div class="cabeza">
+				<!--<img id="logoHalf" src="media/ima/logoFull.png" alt="Unilink" />-->
+			<%= image_tag "logoFull.png",:id => "logoHalf", :alt => "Unilink", :title => "Unilink"%>
+					<div id="navLista">						
+						<ul>
+							<li class="navListaE"></li>	
+							<li class="navListaE"></li>
+							<li class="navListaE"></li>
+						</ul>	
+					</div>
+			</div>
+		</div>
+		<div class="base">
+			<div class="wrap">
+				<div class="wrapHalfL-01">
+					<br /><br />
+					<h2>Conéctate con Unilink</h2><br />
+					<h3>Descubre a universitarios emprendedores como tú.</h3><br />
+					<h3>Forma parte de las nuevas ideas que están moviendo al mundo.</h3>					
+				</div>
+				<div class="wrapHalf-01">
+					<div class="formas">
+					
+						
+						<!-- Aquí está el formulario para el inicio de sesión -->
+						<h1><%= @saludo %></h1>
+						<%= form_tag({:controller => "principal", :action => "logsesion"}, :method => "post") do %>
+						   <%= label_tag "usuario", "Nombre de usuario:" %>
+						   <br />
+						   <%= text_field_tag "usuario", "", :required => "required" %>
+						   <br />
+						   <%= label_tag "password", "Contraseña:" %>
+						   <br />
+						   <%= text_field_tag "password", "",:required => "required" %>
+						   <br />
+						   <%= submit_tag "Inicia Sesión" %>
+						<% end %>
+					</div>
+					
+
+					
+					<div class="formas">
+						<!-- Aquí está el formulario para el registro de usuarios nuevos -->
+						
+						<h3>¿Eres nuevo en Unilink?</h3>
+						<h2>Regístrate</h2>
+						
+						<%= form_tag({:controller => "principal", :action => "logsesion"}, :method => "post") do %>
+						   <%= label_tag "usuario", "Nombre de usuario:" %>
+						   <br />
+						   <%= text_field_tag "usuario", "", :required => "required" %>
+						   <br />
+						   <%= label_tag "email", "Correo:" %>
+						   <br />
+						   <%= text_field_tag "email", "",  :required => "required" %>
+						   <br />
+							<%= label_tag "contraseña", "Contraseña:" %>
+						   <br />
+						   <%= text_field_tag "contraseña", "",  :required => "required" %>
+						   <br />
+							<%= label_tag "dateborn", "Fecha de nacimiento:" %>
+						   <br />
+						   <%= text_field_tag "dateborn", "dd/mm/yyyy",  :required => "required" %>
+						   <br />
+						   <%= submit_tag "Registrarte en Unilink" %>
+						<% end %>
+
+						
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="base">
+			<footer>
+				<h4>Unilink 2015</h4>
+			</footer>
+		</div>
+	</body>
+</html>

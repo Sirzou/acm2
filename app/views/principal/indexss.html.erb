@@ -1,0 +1,45 @@
+
+<h1><%= @saludo %></h1>
+
+<%= form_tag({:controller => "principal", :action => "logsesion"}, :method => "post") do %>
+   <%= label_tag "usuario", "Usuario" %>
+   <br />
+   <%= text_field_tag "usuario", "", :required => "required" %>
+   <br />
+   <%= label_tag "contraseña", "Contraseña" %>
+   <br />
+   <%= text_field_tag "comentario", "",:required => "required" %>
+   <br />
+   <%= submit_tag "Inicia Sesion" %>
+<% end %>
+
+
+
+<h1>Registrate!</h1>
+
+
+<%= form_tag({:controller => "principal", :action => "logsesion"}, :method => "post") do %>
+   <%= label_tag "usuario", "Usuario" %>
+   <br />
+   <%= text_field_tag "usuario", "", :required => "required" %>
+   <br />
+   <%= label_tag "email", "Email" %>
+   <br />
+   <%= text_field_tag "email", "",  :required => "required" %>
+   <br />
+	<%= label_tag "contraseña", "Contraseña" %>
+   <br />
+   <%= text_field_tag "contraseña", "",  :required => "required" %>
+   <br />
+	<%= label_tag "dateborn", "Fecha de Nacimiento " %>
+   <br />
+   <%= text_field_tag "dateborn", "dd/mm/yyyy",  :required => "required" %>
+   <br />
+   <%= submit_tag "Registrate ahora!" %>
+<% end %>
+
+
+
+
+
+<p>Find me in app/views/principal/index.html.erb</p>

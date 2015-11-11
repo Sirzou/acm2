@@ -1,0 +1,245 @@
+﻿//colors
+$black: #000000;
+$white: #ffffff;
+$color_robins_egg_blue_approx: #00bcd4;
+$color_sail_approx: #b3e5fc;
+
+//fonts
+$font_0: Segoe UI;
+$font_1: Arial;
+$font_2: sans-serif;
+
+//urls
+$url_0: url(ima/fondoFix.jpg);
+$url_1: url(ima/fondoP.png);
+
+//@extend-elements
+//original selectors
+//html, body, h1, h2, h3, h4, h5, h6
+%extend_1 {
+	font-family: $font_0, $font_1, $font_2;
+	font-weight: 400;
+	margin: 10px 0;
+}
+
+//original selectors
+//.fotoDePerfil, .fotoDeProyecto
+%extend_2 {
+	margin: 5px;
+	width: 150px;
+	height: 150px;
+}
+
+
+body {
+	background-image: $url_0;
+	background-attachment: fixed;
+	background-size: 100% 100%;
+	@extend %extend_1;
+}
+html {
+	@extend %extend_1;
+}
+h1 {
+	@extend %extend_1;
+}
+h2 {
+	@extend %extend_1;
+}
+h3 {
+	@extend %extend_1;
+}
+h4 {
+	@extend %extend_1;
+}
+h5 {
+	@extend %extend_1;
+}
+h6 {
+	@extend %extend_1;
+}
+a {
+	&:link {
+		text-decoration: none;
+		color: $black;
+	}
+	&:visited {
+		text-decoration: none;
+		color: $black;
+	}
+	&:hover {
+		text-decoration: none;
+		color: $black;
+	}
+	&:active {
+		text-decoration: none;
+		color: $black;
+	}
+}
+footer {
+	diaplay: block;
+	padding: 10px;
+	color: $white;
+	text-align: center;
+	clear: both;
+}
+.base {
+	background-image: $url_1;
+	margin: 8px;
+	height: auto;
+}
+.cabeza {
+	display: block;
+	margin: auto;
+	padding-left: 10px;
+	padding-right: 10px;
+	background-color: $color_robins_egg_blue_approx;
+	width: 800px;
+	height: auto;
+}
+#navLista {
+	diaplay: inline;
+	padding: 0;
+	position: relative;
+	overflow: auto;
+	ul {
+		float: left;
+		padding: 10px;
+	}
+}
+#logoHalf {
+	float: left;
+	padding: 10px;
+	padding-left: 100px;
+	padding-right: 100px;
+	height: 60px;
+}
+.navListaE {
+	display: inline;
+	list-style-type: none;
+	color: $white;
+	text-align: center;
+	margin: 5px;
+	padding: 5px;
+	a {
+		color: $white;
+	}
+}
+#imaConf {
+	width: 20px;
+	height: 20px;
+}
+.formInicio {
+	color: $white;
+}
+.formNuevoA {
+	color: $white;
+}
+.formNuevoB {
+	color: $white;
+}
+.formas {
+	display: block;
+	padding: 20px;
+	color: $white;
+}
+.wrap {
+	display: block;
+	margin: auto;
+	background-color: $color_sail_approx;
+	padding: 10px;
+	width: 800px;
+	height: auto;
+}
+.wrapHalf-01 {
+	background-image: $url_1;
+	margin: 10px;
+	margin-left: 400px;
+	width: 400px;
+	height: 600px;
+}
+.wrapHalfL-01 {
+	float: left;
+	background-image: $url_1;
+	color: $white;
+	margin-top: 10px;
+	margin-left: 10px;
+	margin-bottom: 10px;
+	width: 380px;
+	height: 600px;
+	padding-left: 10px;
+}
+.wrapHalf-02 {
+	background-image: $url_1;
+	margin: 10px;
+	margin-left: 400px;
+	width: 400px;
+	height: 950px;
+}
+.wrapHalfL-02 {
+	float: left;
+	background-image: $url_1;
+	color: $white;
+	margin-top: 10px;
+	margin-left: 10px;
+	margin-bottom: 10px;
+	width: 380px;
+	height: 950px;
+	padding-left: 10px;
+}
+.wrapUsuario {
+	display: block;
+	margin: auto;
+	background-color: $white;
+	padding: 10px;
+	width: 780px;
+	height: auto;
+}
+.publicacion {
+	display: block;
+	margin-left: 40%;
+	padding: 10px;
+	color: $black;
+	width: 400px;
+	height: auto;
+}
+.publicacionP {
+	display: block;
+	margin-left: 15%;
+	padding: 10px;
+	color: $black;
+	width: 500px;
+	height: auto;
+}
+.identidadUsuario {
+	background-color: $white;
+	position: fixed;
+	float: left;
+	padding: 10px;
+	width: 300px;
+	height: auto;
+}
+.identidadProyecto {
+	display: block;
+	margin: auto;
+	padding: 10px;
+	width: 600px;
+	height: auto;
+}
+.fotoDePerfil {
+	@extend %extend_2;
+}
+.fotoDeProyecto {
+	@extend %extend_2;
+}
+.fPerfil {
+	background-image: $url_1;
+	padding: 0;
+	width: 160px;
+	height: 160px;
+}
+.fotoMiniatura {
+	padding-right: 10px;
+	width: 30px;
+	height: 30px;
+}

@@ -1,0 +1,97 @@
+CREATE DATABASE acm_development;
+CREATE DATABASE acm_test;
+CREATE DATABASE acm_production;
+
+development:
+adapter: mysql2
+encoding: utf8
+reconnect: false
+database: acm_development
+pool: 5
+username:
+password:
+host: 127.0.0.1
+
+test:
+adapter: mysql2
+encoding: utf8
+reconnect: false
+database: acm_test
+pool: 5
+username:
+password:
+host: 127.0.0.1
+
+production
+adapter: mysql2
+encoding: utf8
+reconnect: false
+database: acm_production
+pool: 5
+username:
+password:
+host: 127.0.0.1
+
+cd acm
+rails g model Persona email:string password:string nombre:string descripcion:text universidad:integer profesion:string
+rails g model Empresa nombre:string descripcion:text motivo:text fechaI:String
+rails g model Universidad nombre:string 
+
+
+@persona = Persona.new({
+	:nombre => "",
+	:universidad => "",
+	:profesion => "",
+	:underG => "",
+	:universidad => "IdUniversidad",
+	:tiempoE => "",
+	:descripcín => ""});
+@persona.save();
+@empresa = Empresa.new({
+	:Nombre => "",
+	:Motivo => "",
+	:FechaI => ""});
+@empresa.save();
+@universidad = Universidad.new({
+	:nombre => "",
+	:capmus => "",
+	:ofertaA => "IdOferta"});//???
+@universidad.save();
+
+class Persona < ActiveRecord::Base
+	has_one :universidad
+	has_and_belongs_to_many :empresas
+	belongs_to_many :empresas
+end
+class Empresa < ActiveRecord::Base
+	has_many :personas
+	has_and_belongs_to_many :personas
+    
+end
+class cEmpresa begin
+	metodo newEnterprise()begin
+	<%= vEmpresa # newEnterprise %>
+end
+end
+class vEmpresa begin
+	@nombre
+	@motivo
+	@fechaI
+	metodo verEnterprise(nombre,motivo,fechaI)begin
+		@nombre=@empresa.nombre
+		@motivo=@empresa.motivo
+		@fechaI=@empresa.fechaI
+	end
+	metodo newEnterprise(nombre,motivo,fechaI)begin
+		verEnterprise(@nombre,@motivo,@fechaI);
+	end	
+end
+class vPerfil begin
+	metodo verEnterprise(nombre,motivo,fechaI)begin
+		@nombre=persona.nombre;
+		@universidad=persona.universidad;
+		@profesion=persona.profesion;
+		@tiempoE=persona.tiempoE;
+		@descripcion=persona.descripción;
+	end
+end
